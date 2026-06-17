@@ -1,0 +1,10 @@
+# Fichiers à ignorer
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.log
+node_modules/
