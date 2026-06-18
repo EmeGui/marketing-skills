@@ -4,7 +4,7 @@
 
 ## Contexte
 
-Une PME de conseil veut un article sur l’automatisation des processus. Le brief contient deux chiffres réels : 15 % de temps gagné sur les fonctions support, 30 % du budget projet à consacrer à la conduite du changement. Le LLM produit un premier jet correct mais noyé dans le slop, où ces deux chiffres se perdent.
+Une PME de conseil veut un article sur l’automatisation des processus. Le brief contient deux chiffres réels : 15 % de productivité gagnée sur les fonctions support, 30 % du budget projet à consacrer à la conduite du changement. Le LLM produit un premier jet correct mais noyé dans le slop, où ces deux chiffres se perdent.
 
 ## Avant (généré par LLM)
 
@@ -27,13 +27,11 @@ Six transitions mécaniques (« Dans un monde où », « De plus », « Par aill
 
 ## Après (corrigé)
 
-Une PME qui automatise ses processus support gagne environ 15 % de temps. Le chiffre est réel. Ce n’est pas le plus important.
+Un nombre croissant d’entreprises automatisent leurs processus métier. Sur les fonctions support, le gain de productivité atteint environ 15 %, avec moins d’erreurs de ressaisie.
 
-L’automatisation ne remplace pas les équipes. Elle supprime les tâches que personne ne devrait faire : ressaisir une facture, vérifier un écart à la main, relancer le même dossier trois fois. Ce temps rendu, les équipes le réinvestissent dans le pilotage.
+Les projets qui consacrent près de 30 % de leur budget à la conduite du changement obtiennent de meilleurs résultats. Sans formation, l’adoption cale.
 
-Reste un frein, toujours le même : la formation. Un outil déployé sans accompagnement prend la poussière. Les projets qui réussissent consacrent près de 30 % de leur budget à la conduite du changement, pas à la technique.
-
-Le retour sur investissement est là. Il est d’abord humain.
+Sur la durée, les bénéfices dépassent les coûts de départ. C’est ce qui fait de l’automatisation un bon investissement.
 
 ## Mesures après
 
@@ -41,13 +39,13 @@ Le retour sur investissement est là. Il est d’abord humain.
 |---|---|---|
 | Mots-signature LLM | ≈ 12 | 0 |
 | Transitions creuses en tête de phrase | 6 | 0 |
-| Longueur de phrase (min-max, mots) | 22-34 | 4-24 |
+| Longueur de phrase (min-max, mots) | 22-34 | 4-20 |
 | Typographie FR | non | oui |
-| Chiffres concrets mis en avant | 0 | 2 (en tête) |
+| Chiffres concrets mis en avant | 0 | 2 (en évidence) |
 
 ## Ce qui a changé, étape par étape
 
-- **Étape 2 : burstiness.** Des phrases de 4 à 24 mots remplacent le bloc uniforme. « Le chiffre est réel. Ce n’est pas le plus important. » casse le rythme après une phrase longue.
+- **Étape 2 : burstiness.** Des phrases de 4 à 20 mots remplacent le bloc uniforme. « Sans formation, l’adoption cale. » (4 mots) tranche après une phrase de 20.
 - **Étape 3 : lexique.** Suppression de « il est important de noter », « permet de contribuer à », « véritablement », « significativement », « opportunité majeure ». Et des six transitions creuses : on enchaîne sans béquille.
-- **Étape 4 : typographie.** L’« Après » passe en apostrophes courbes (`’`), guillemets `« »` et espaces insécables (`15 %`, `30 %`). L’« Avant » gardait la typographie anglaise du LLM (`15%`).
-- **La substance, surtout.** Les deux chiffres (15 %, 30 %) étaient déjà dans le texte, noyés. De-slopper ne consiste pas à *inventer* du concret : ça consiste à *dégager* celui qui était là. L’« Après » n’ajoute aucun fait absent de l’« Avant ».
+- **Étape 4 : typographie.** L’« Après » passe en apostrophes courbes, guillemets `« »` et espaces insécables (`15 %`, `30 %`). L’« Avant » gardait la typographie anglaise du LLM (`15%`).
+- **Aucun ajout.** Les deux chiffres (15 %, 30 %) étaient déjà là, noyés. De-slopper ne consiste pas à inventer du concret : ça consiste à dégager celui qui était là. L’« Après » n’ajoute aucun fait, aucun exemple ni aucune opinion absents de l’« Avant ».
