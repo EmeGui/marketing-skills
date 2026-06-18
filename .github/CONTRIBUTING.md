@@ -34,6 +34,18 @@ Merci de votre intérêt pour contribuer. Ce repo est ouvert à toute personne q
 - Exemples concrets, pas de cas théoriques
 - Pas de jargon inutile
 
+## Curation
+
+Ce repo est une bibliothèque curée par Nodiris. Les contributions sont les bienvenues, mais Nodiris garde le contrôle du merge : une PR peut être refusée, renvoyée pour modification, ou éditée pour rester cohérente avec la méthode et la voix du repo. Le délai de réponse n'est pas garanti.
+
+## Vérification automatique
+
+Chaque PR passe un lint (`scripts/lint.py`, lancé par GitHub Actions) qui contrôle : frontmatter des skills, liens internes, typographie (pas de tiret cadratin en prose) et manifestes JSON. Lancez-le en local avant de soumettre :
+
+```bash
+python3 scripts/lint.py
+```
+
 ## Licence
 
 En contribuant, vous acceptez que votre contribution soit publiée sous la licence MIT de ce repo (voir [LICENSE](../LICENSE)).
