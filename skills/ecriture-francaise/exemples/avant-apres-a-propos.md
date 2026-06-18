@@ -16,7 +16,7 @@ Nous aidons des dirigeants à prendre des décisions marketing.
 
 Pas à écrire des plans de 80 pages. Pas à "booster leur présence digitale". À décider. Quelle clientèle prioriser. Quel positionnement défendre. Quels canaux arrêter.
 
-Nous sommes dix. Consultants, analystes, anciens directeurs marketing. Nous travaillons pour des PME industrielles, des ETI de services, deux grands groupes — et nous refusons les missions où le vrai problème n'est pas le marketing.
+Nous sommes dix. Consultants, analystes, anciens directeurs marketing. Nous travaillons pour des PME industrielles, des ETI de services, deux grands groupes. Et nous refusons les missions où le vrai problème n'est pas le marketing.
 
 Notre méthode tient en trois règles :
 1. On mesure avant de recommander.
@@ -30,8 +30,8 @@ Depuis 2015, nous avons mené 140 missions. Le taux de renouvellement de nos cli
 | Problème | Avant | Après |
 |---|---|---|
 | Jargon | "acteur de référence", "data-driven", "approche sur-mesure" | Vocabulaire simple, concret |
-| Autocongratulation | "experts passionnés", "méthodologie éprouvée" | "nous sommes dix" — factuel |
-| Énumération vide | "des PME aux grands groupes" | "PME industrielles, ETI de services, deux grands groupes" — précis |
+| Autocongratulation | "experts passionnés", "méthodologie éprouvée" | "nous sommes dix" : factuel |
+| Énumération vide | "des PME aux grands groupes" | "PME industrielles, ETI de services, deux grands groupes" : précis |
 | Promesse creuse | "l'excellence et l'innovation au service de votre croissance" | "Nous aidons des dirigeants à prendre des décisions" |
 | Ton | Institutionnel, interchangeable | Direct, assume des choix, identité claire |
 | Structure | Paragraphes standards | Rythme volontaire (phrases courtes qui frappent, puis listes) |

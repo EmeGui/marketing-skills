@@ -36,7 +36,7 @@ Le retour sur investissement est là, mais il est humain avant d'être financier
 | "permettre de contribuer à" | Double verbe faible | Remplacé par verbe direct |
 | "De plus" / "Par ailleurs" | Connecteurs mécaniques | Supprimés, transitions naturelles |
 | Nominalisation | "la mise en œuvre de l'automatisation" | "automatiser ces processus" |
-| "Cependant" / "Néanmoins" | Balises de concession | "Reste un frein" — plus naturel |
+| "Cependant" / "Néanmoins" | Balises de concession | "Reste un frein" : plus naturel |
 | "En conclusion" | Formule scolaire | Supprimée, phrase de clôture organique |
 | Adverbes vides | "significativement", "véritablement" | Supprimés ou remplacés par des chiffres |
 | Énumération à 3 | "les organisations... les entreprises... les sociétés" | Phrases variées, rythme travaillé |

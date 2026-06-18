@@ -1,58 +1,71 @@
 # marketing-skills — des compétences marketing actionnables, pas des prompts
 
-> Par [Nodiris](https://nodiris.ai) — Agence de marketing stratégique pour dirigeants de PME et ETI.
+> Par [Nodiris](https://nodiris.ai), le stratège de contenu pour l'ère de l'IA. On aide les dirigeants de PME et ETI à être visibles là où se prennent les décisions : moteurs de recherche et modèles de langage.
 
-**marketing-skills** est une bibliothèque ouverte de compétences marketing structurées. Chaque skill est un bloc autonome : principe, méthode, contexte d'utilisation, exemples et pièges. Pas des prompts copiés-collés. Des patterns réutilisables.
+**marketing-skills** est une bibliothèque ouverte de compétences marketing. Chaque skill est un bloc autonome : principe, méthode vérifiable, exemples concrets, pièges. Pas un prompt copié sur Twitter. Une méthode qu'on peut appliquer, mesurer et transmettre.
 
-## Pourquoi ce repo ?
+## Pourquoi ce repo
 
-Les marketeurs passent trop de temps à chercher des prompts sur Twitter ou Reddit. Le problème : un prompt sans méthode ni contexte ne donne pas de résultats fiables.
+Les marketeurs collectionnent des prompts. Le problème : un prompt sans méthode ni critère de réussite ne donne pas de résultat fiable. Tu obtiens un texte, tu ne sais pas s'il est bon, tu recommences.
 
-Un **skill**, c'est différent :
-- Un **principe** clair (pourquoi ça marche)
-- Une **méthode** étape par étape (comment l'appliquer)
-- Des **exemples** concrets (à quoi ça ressemble)
-- Les **pièges** à éviter (ce qui fait échouer)
+Un **skill**, c'est l'inverse :
 
-Ce repo est construit par Nodiris à partir de cas réels sur le terrain PME/ETI, et ouvert à contribution.
+- un **principe** clair (pourquoi ça marche) ;
+- une **méthode** étape par étape, où chaque étape est vérifiable (tu sais quand tu as fini) ;
+- des **exemples** réels (avant / après) ;
+- les **pièges** qui font échouer.
+
+Et il y a une raison de fond. Aujourd'hui, une part croissante du contenu passe par un modèle de langage. Quand tout le monde écrit avec les mêmes outils, deux choses redeviennent rares et chères : **une voix qu'on reconnaît** et **un français qu'une machine n'a pas visiblement écrit**. Les deux premiers skills attaquent exactement ça.
+
+Ce repo rassemble des méthodes que Nodiris utilise sur le terrain, en PME et ETI. On les ouvre parce qu'une méthode ne vaut que si elle résiste à l'épreuve des autres.
 
 ## Contenu
 
-| Skill | Description | Statut |
-|---|---|---|
-| [Brand Voice](skills/brand-voice/SKILL.md) | Extraire, formaliser et utiliser une voix de marque distinctive | ✅ |
-| [Écriture française](skills/ecriture-francaise/SKILL.md) | Écrire en français sans IA slop : syntaxe, registres, anti-anglicismes | ✅ |
-| Stratégie de contenu GEO | Construire une présence éditoriale visible dans les LLMs | 🔜 |
-| Audit de messagerie | Diagnostiquer et repositionner un message commercial | 🔜 |
-| Ancrage persona | Créer des personas acheteurs actionnables pour le contenu | 🔜 |
-| Contenu d'aide à la vente | Équiper les équipes commerciales avec du contenu qui convertit | 🔜 |
+| Skill | Ce qu'il fait |
+|---|---|
+| [Brand Voice](skills/brand-voice/SKILL.md) | Extraire, formaliser et rendre reproductible une voix de marque, sur une fiche d'une page. |
+| [Écriture française](skills/ecriture-francaise/SKILL.md) | Rédiger en français sans slop IA : mesurer le rythme, purger le lexique signature, rétablir la typographie. |
+
+D'autres skills suivront. On préfère deux skills aboutis à une liste de promesses.
+
+## Comment utiliser ces skills
+
+Trois façons, selon ton outillage :
+
+**À la main.** Lis le `SKILL.md`, applique la méthode, coche les critères de réussite. Les références (canvas, lexique, métriques) sont des outils prêts à l'emploi.
+
+**Avec un LLM.** Colle le contenu du `SKILL.md` en contexte de ton modèle (Claude, ChatGPT, autre), puis donne ta tâche : « Voici ma méthode de brand voice. Analyse ces 6 textes et produis la fiche. » Les skills contiennent aussi des **prompts d'injection** prêts à copier (Brand Voice étape 6, Écriture française étape 5).
+
+**Comme skill Claude.** Chaque dossier suit le format [Agent Skill](https://code.claude.com/docs/en/skills) (frontmatter `name` + `description`). Copie le dossier du skill dans `~/.claude/skills/` (Claude Code) ou importe-le depuis les réglages de Claude : il se déclenchera tout seul quand ta demande correspond.
 
 ## Format d'un skill
 
-Chaque skill suit une structure standard :
+Chaque skill suit la même structure :
 
-1. **Principe** — la logique sous-jacente
-2. **Quand l'utiliser** — les déclencheurs
-3. **Méthode** — étapes concrètes
-4. **Exemples** — avant/après, cas d'usage
-5. **Pièges** — les erreurs classiques
-6. **Pour aller plus loin** — ressources et skills connexes
+1. **Principe** : la logique sous-jacente.
+2. **Quand l'utiliser** : les déclencheurs.
+3. **Méthode** : étapes vérifiables.
+4. **Exemples** : avant / après, cas réels.
+5. **Pièges** : les erreurs classiques.
+6. **Pour aller plus loin** : références et skills connexes.
 
-Voir [docs/skill-format.md](docs/skill-format.md) pour la spécification complète.
+Spécification complète : [docs/skill-format.md](docs/skill-format.md).
 
 ## Contribuer
 
 Les pull requests sont bienvenues. Avant de soumettre :
 
-1. Vérifiez que le skill n'existe pas déjà
-2. Suivez le [format standard](docs/skill-format.md)
-3. Fournissez au moins un exemple concret
-4. La langue du repo est le **français** — les contributions en français uniquement
+1. Vérifie que le skill n'existe pas déjà.
+2. Suis le [format standard](docs/skill-format.md).
+3. Fournis au moins un exemple concret.
+4. Le repo est en **français**, contributions en français uniquement.
+
+Détails dans [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 ## Licence
 
-MIT © Nodiris — voir [LICENSE](LICENSE)
+MIT © Nodiris. Voir [LICENSE](LICENSE).
 
 ## À propos de Nodiris
 
-[Nodiris](https://nodiris.ai) aide les dirigeants de PME et ETI à construire une présence éditoriale stratégique, visible dans les moteurs de recherche comme dans les LLMs. Stratégie de contenu, GEO, positionnement et pilotage par la data.
+[Nodiris](https://nodiris.ai) est le stratège de contenu pour l'ère de l'IA. On aide les dirigeants de PME et ETI à construire une présence éditoriale qui tient la route, visible autant dans les moteurs de recherche que dans les réponses des modèles de langage (GEO). Stratégie de contenu, positionnement, et pilotage par la donnée.

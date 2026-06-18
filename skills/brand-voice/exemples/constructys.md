@@ -42,7 +42,7 @@
 **Mots interdits** :
 - ❌ "disruption", "révolutionner", "next-gen", "scalable"
 - ❌ "leader" (ne jamais s'auto-proclamer)
-- ❌ "solution" (trop vague — dire ce qu'on fait)
+- ❌ "solution" (trop vague : dire ce qu'on fait)
 - ❌ "green", "durable" (remplacé par "bas carbone", chiffré)
 
 **Mots signatures** :
@@ -50,21 +50,53 @@
 - ✅ "maîtrise d'ouvrage", "cycle de vie"
 - ✅ "réalisé en France", "industrialisation"
 
-## Étape 5 : Prompt d'injection
+## Étape 5 : Fiche de voix (synthèse d'une page)
+
+```markdown
+# Voix de marque : Constructys
+Mise à jour : 18/06/2026 • Confiance : élevée (6 textes, 2970 mots)
+
+## En une phrase
+Constructys parle comme un expert technique qui prouve à des maîtres
+d'ouvrage, sans jamais se vanter.
+
+## Curseurs
+Registre 4 • Densité 3 • Posture 3 • Énergie 2 • Abstraction 3
+
+## Règles d'écriture
+- Pronom : "nous" pour la marque, "vous" pour le lecteur. Jamais de "je".
+- Phrases : mixtes, juxtaposées plutôt que subordonnées. Sobres.
+- Ouverture : un fait, un chantier, un chiffre. Jamais un slogan.
+- Preuve : chaque affirmation technique est chiffrée ou référencée.
+
+## Lexique
+Signatures : filière, engagement, performance mesurable, maîtrise d'ouvrage,
+cycle de vie, réalisé en France, industrialisation.
+Interdits : disruption, révolutionner, scalable, leader, solution, green.
+Postures interdites : ne jamais s'auto-proclamer leader ; ne jamais promettre
+sans chiffre.
+
+## Ce qu'on ne fait jamais
+Pas de point d'exclamation. Pas d'anglicisme. Pas de "durable" non chiffré :
+on dit "-40 % de béton". On ne parle pas des concurrents. On ne survend pas.
+```
+
+## Étape 6 : Test de reproductibilité
+
+D'abord, le prompt d'injection tiré de la fiche :
 
 ```
 Écris avec la voix suivante :
 Tu es un expert technique qui parle à des professionnels de la construction.
-Ton ton est sobre, précis, jamais autopromotionnel. Tu dis "nous" pour la
-marque, "vous" pour le lecteur. Tu n'utilises jamais d'anglicismes ni de
-superlatifs creux ("leader", "meilleur"). Tu préfères "béton bas carbone" à
-"écologique" et "performance mesurable" à "durable". Chaque affirmation
-technique est étayée par un chiffre ou une référence. Les phrases sont
-juxtaposées plutôt que subordonnées. La ponctuation est sobre : pas de
-points d'exclamation, des deux-points pour les énumérations.
+Ton sobre, précis, jamais autopromotionnel. Tu dis "nous" pour la marque,
+"vous" pour le lecteur. Aucun anglicisme, aucun superlatif creux ("leader",
+"meilleur"). Tu préfères "béton bas carbone" à "écologique" et "performance
+mesurable" à "durable". Chaque affirmation technique est étayée par un
+chiffre. Phrases juxtaposées plutôt que subordonnées. Ponctuation sobre :
+pas de points d'exclamation, des deux-points pour les énumérations.
 ```
 
-## Étape 6 : Test
+Ensuite, on cache un texte réel et on demande au modèle un post comparable.
 
 **Texte original** (écrit par le DG sur LinkedIn) :
 

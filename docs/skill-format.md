@@ -1,6 +1,6 @@
 # Format standard d'un skill marketing
 
-> Spécification v1.0 — Toute contribution à `marketing-skills` doit suivre ce format.
+> Spécification v1.0 : Toute contribution à `marketing-skills` doit suivre ce format.
 
 ## Objectif
 
@@ -12,7 +12,7 @@ Chaque skill est dans un dossier `skills/<nom-du-skill>/` et contient :
 
 ```
 skills/<nom-du-skill>/
-├── SKILL.md           ← obligatoire : le skill lui-même
+├── SKILL.md           ← obligatoire : frontmatter (name, description) + le skill
 ├── exemples/          ← obligatoire : au moins un exemple concret
 │   └── exemple-1.md
 └── references/        ← optionnel : ressources complémentaires
@@ -21,7 +21,15 @@ skills/<nom-du-skill>/
 
 ## Contenu du SKILL.md
 
+Chaque `SKILL.md` s'ouvre sur un **frontmatter YAML** (le format Claude Agent Skill), suivi du corps en markdown.
+
 ```markdown
+---
+name: nom-du-skill
+description: Ce que fait le skill ET quand l'utiliser. C'est ce champ qui déclenche le skill : reste précis, cite des situations concrètes, distingue-le des skills voisins. À la troisième personne, une à deux phrases.
+license: MIT
+---
+
 # <Nom du skill>
 
 > Une phrase qui résume la promesse du skill.
@@ -38,7 +46,7 @@ Liste de situations déclencheuses. Format : "Quand..." ou "Si...".
 
 Étapes numérotées et actionnables. Chaque étape doit être vérifiable (le lecteur sait quand il a fini).
 
-1. **Nom de l'étape** — ce qu'il faut faire et pourquoi. Inclure des critères de succès.
+1. **Nom de l'étape** : ce qu'il faut faire et pourquoi. Inclure des critères de succès.
 2. ...
 
 ## Exemples
@@ -59,18 +67,25 @@ Les erreurs les plus fréquentes. Format : liste avec ❌ / ✅.
 *Dernière mise à jour : JJ/MM/AAAA*
 ```
 
+### Le frontmatter en détail
+
+- **`name`** : identique au nom du dossier, en minuscules avec tirets (`brand-voice`), sans accent ni espace. 64 caractères max.
+- **`description`** : le champ le plus important. C'est lui qu'un assistant lit pour décider quand activer le skill. Dis ce que le skill fait *et* dans quelles situations l'employer, avec des déclencheurs concrets. 1024 caractères max, troisième personne.
+- **`license`** : facultatif. `MIT` par défaut dans ce repo.
+
 ## Contraintes de style
 
-- **Français uniquement** — pas de mélange fr/en
-- **Tutoiement** — cohérent avec le ton Nodiris
-- **Phrases courtes** — max 25 mots
-- **Exemples concrets** — pas de cas théoriques
-- **Pas de jargon inutile** — expliquer les termes techniques la première fois
+- **Français uniquement** : pas de mélange fr/en
+- **Tutoiement** : cohérent avec le ton Nodiris
+- **Phrases de longueur variée** : alterner court et long (cf. le skill [Écriture française](../skills/ecriture-francaise/SKILL.md)) ; éviter le rythme uniforme qui trahit un texte généré
+- **Exemples concrets** : pas de cas théoriques
+- **Pas de jargon inutile** : expliquer les termes techniques la première fois
 
 ## Checklist de publication
 
 Avant de soumettre une PR, vérifier :
 
+- [ ] Le frontmatter contient `name` (= nom du dossier) et `description` (quoi + quand)
 - [ ] Le skill a un titre clair et une promesse en une phrase
 - [ ] La méthode est numérotée et chaque étape est vérifiable
 - [ ] Au moins un exemple concret dans `exemples/`

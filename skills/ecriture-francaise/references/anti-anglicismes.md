@@ -47,7 +47,7 @@
 | meeting | réunion, rendez-vous |
 | call | appel, visioconférence |
 | report | rapport, bilan, compte rendu |
-| CEO / CTO / CMO | PDG / DSI / directeur marketing — utiliser le titre français |
+| CEO / CTO / CMO | PDG / DSI / directeur marketing, selon le titre français consacré |
 
 ## Faux-amis
 
