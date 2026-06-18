@@ -1,0 +1,11 @@
+{
+  "name": "marketing-skills",
+  "description": "Brand Voice + Écriture française : extraire une voix de marque reproductible et rédiger un français sans slop IA. Par Nodiris.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Nodiris",
+    "url": "https://nodiris.ai"
+  },
+  "homepage": "https://github.com/EmeGui/marketing-skills",
+  "license": "MIT"
+}

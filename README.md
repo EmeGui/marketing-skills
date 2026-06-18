@@ -30,13 +30,50 @@ D'autres skills suivront. On préfère deux skills aboutis à une liste de prome
 
 ## Comment utiliser ces skills
 
-Trois façons, selon ton outillage :
+Les deux skills suivent le standard ouvert [Agent Skill](https://code.claude.com/docs/en/skills) : un dossier avec un `SKILL.md` (frontmatter `name`, `description`, `argument-hint`). Tu peux donc les brancher dans Claude, ou simplement t'en servir comme méthode.
 
-**À la main.** Lis le `SKILL.md`, applique la méthode, coche les critères de réussite. Les références (canvas, lexique, métriques) sont des outils prêts à l'emploi.
+### Dans Claude Code
 
-**Avec un LLM.** Colle le contenu du `SKILL.md` en contexte de ton modèle (Claude, ChatGPT, autre), puis donne ta tâche : « Voici ma méthode de brand voice. Analyse ces 6 textes et produis la fiche. » Les skills contiennent aussi des **prompts d'injection** prêts à copier (Brand Voice étape 6, Écriture française étape 5).
+**Le plus simple : le marketplace, en une commande.** Ce repo est un marketplace de plugins. Tu l'ajoutes, tu installes :
 
-**Comme skill Claude.** Chaque dossier suit le format [Agent Skill](https://code.claude.com/docs/en/skills) (frontmatter `name`, `description`, `argument-hint`). Copie le dossier dans `~/.claude/skills/` (Claude Code) ou importe-le depuis les réglages de Claude. Le nom du dossier devient la commande : appelle-la avec son argument (`/brand-voice https://exemple.com`), ou laisse le skill se déclencher quand ta demande correspond.
+```
+/plugin marketplace add EmeGui/marketing-skills
+/plugin install marketing-skills@nodiris
+```
+
+En pur CLI (sans ouvrir Claude Code), c'est le même geste :
+
+```bash
+claude plugin marketplace add EmeGui/marketing-skills
+claude plugin install marketing-skills@nodiris
+```
+
+Les commandes apparaissent, préfixées par le nom du plugin, et acceptent un argument :
+
+```
+/marketing-skills:brand-voice https://exemple.com
+/marketing-skills:ecriture-francaise mon-article.md
+```
+
+Tu mets à jour avec `/plugin marketplace update`. Claude peut aussi déclencher un skill de lui-même quand ta demande correspond à sa description.
+
+**Si tu préfères les commandes courtes** (`/brand-voice` sans préfixe), copie plutôt les dossiers dans tes skills personnels :
+
+```bash
+mkdir -p ~/.claude/skills
+git clone --depth 1 https://github.com/EmeGui/marketing-skills /tmp/ms
+cp -r /tmp/ms/skills/* ~/.claude/skills/ && rm -rf /tmp/ms
+```
+
+Tu obtiens directement `/brand-voice` et `/ecriture-francaise`. Contrepartie : pas de mise à jour automatique.
+
+### Dans Claude Cowork
+
+Cowork (l'app desktop agentique) lit le même standard Agent Skill. Ouvre le gestionnaire de **Plugins**, ajoute le marketplace `EmeGui/marketing-skills`, installe le plugin : les skills deviennent disponibles dans tes sessions de travail, et Claude les charge quand la tâche s'y prête.
+
+### Avec n'importe quel LLM (sans rien installer)
+
+Pas de Claude Code sous la main ? Colle le contenu d'un `SKILL.md` en contexte de ton modèle (Claude, ChatGPT, autre) et donne ta tâche : « Voici ma méthode de brand voice, analyse ces 6 textes et produis la fiche. » Chaque skill embarque aussi un **prompt d'injection** prêt à copier (Brand Voice étape 6, Écriture française étape 5). Et rien ne t'empêche de les lire comme des méthodes : les références (canvas, lexique, métriques) sont des outils autonomes.
 
 ## Format d'un skill
 

@@ -1,0 +1,20 @@
+{
+  "name": "nodiris",
+  "description": "Compétences marketing actionnables par Nodiris, le stratège de contenu pour l'ère de l'IA.",
+  "owner": {
+    "name": "Nodiris"
+  },
+  "plugins": [
+    {
+      "name": "marketing-skills",
+      "source": "./",
+      "description": "Brand Voice + Écriture française : extraire une voix de marque reproductible et rédiger un français sans slop IA.",
+      "version": "0.1.0",
+      "category": "marketing",
+      "author": {
+        "name": "Nodiris",
+        "url": "https://nodiris.ai"
+      }
+    }
+  ]
+}
