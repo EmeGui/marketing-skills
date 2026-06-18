@@ -1,6 +1,7 @@
 ---
 name: brand-voice
-description: Extraire, formaliser et rendre reproductible la voix d'une marque sur une fiche d'une page. Utiliser ce skill quand l'utilisateur veut définir, documenter ou analyser un ton de voix, bâtir une charte éditoriale actionnable, comprendre « comment écrit telle marque », unifier le style de plusieurs rédacteurs, ou rendre une voix reproductible par un LLM. Couvre la collecte de corpus, l'analyse sur 8 dimensions, les curseurs, le lexique signature et le test de reproductibilité. NE PAS utiliser pour corriger le style d'un texte déjà rédigé (voir le skill ecriture-francaise).
+description: Extraire, formaliser et rendre reproductible la voix d'une marque sur une fiche d'une page, à partir de l'URL de son site ou d'un corpus de textes. Utiliser ce skill quand l'utilisateur veut définir, documenter ou analyser un ton de voix, bâtir une charte éditoriale actionnable, comprendre « comment écrit telle marque », unifier le style de plusieurs rédacteurs, ou rendre une voix reproductible par un LLM. Couvre la découverte du corpus (sitemap, pages clés), l'analyse sur 8 dimensions, les curseurs, le lexique signature et le test de reproductibilité. NE PAS utiliser pour corriger le style d'un texte déjà rédigé (voir le skill ecriture-francaise).
+argument-hint: "[url ou nom de marque]"
 license: MIT
 ---
 
@@ -29,18 +30,29 @@ Ce qui rend une voix reproductible, ce n'est pas une liste d'adjectifs (« moder
 
 ## Méthode
 
-### Étape 1 — Collecter le corpus
+### Étape 0 — Point de départ : une URL ou un nom de marque
 
-Rassemble 5 à 10 contenus représentatifs, et surtout **variés** : la voix se révèle dans le contraste entre une page institutionnelle et un post écrit à chaud.
+Le skill s'active avec une entrée (`$ARGUMENTS`) : `/brand-voice https://exemple.com` ou `/brand-voice "Nom de marque"`.
 
-- Pages clés du site (accueil, à propos, offre principale).
-- 3 à 5 articles de blog ou posts LinkedIn.
-- 2 à 3 emails ou newsletters.
-- Si possible, un transcript vidéo ou audio : la voix parlée est la plus authentique, c'est souvent là que se cache le vrai ton.
+- Une **URL** : c'est ton point d'entrée direct.
+- Un **nom de marque** : trouve d'abord le site officiel (recherche web), et confirme-le avant d'aller plus loin.
+- Ni l'un ni l'autre : demande l'URL. Sans corpus, pas d'analyse.
 
-**Critère de succès** : au moins 5 textes, 3 000 mots cumulés, écrits par la marque (pas par une agence externe au style générique).
+### Étape 1 — Découvrir le corpus (sans le réclamer)
 
-> Piège fréquent : analyser un seul texte. Le modèle, comme l'œil humain, surinterprète alors des détails qui ne sont pas signifiants. Il faut du volume pour distinguer le pattern du hasard.
+Ne demande pas au client de t'envoyer ses textes : va les chercher. La cible reste 5 à 10 contenus **variés**, 3 000 mots cumulés. La voix se révèle dans le contraste entre une page institutionnelle et un post écrit à chaud.
+
+1. **Cartographie le site.** Récupère le `sitemap.xml` (à la racine, ou listé dans `/robots.txt` sous `Sitemap:`) : il liste les pages publiées. Pas de sitemap exploitable ? Replie-toi sur les liens de la navigation et du pied de page de l'accueil.
+2. **Priorise les pages qui portent la voix**, dans cet ordre :
+   - l'accueil ;
+   - la page « à propos » / « qui sommes-nous » / « notre vision » ;
+   - l'offre, les services ou le produit principal ;
+   - les 3 à 5 articles de blog les plus récents (le ton y est le plus libre) ;
+   - à défaut de blog, 2 pages cas client ou réalisations.
+3. **Récupère et nettoie.** Charge chaque page, garde le texte éditorial, jette le boilerplate (menu, cookies, mentions légales). Compte les mots récoltés.
+4. **Contrôle le volume.** Moins de 3 000 mots exploitables, ou site qui ne rend presque rien (one-pager, rendu JS vide) : continue, mais baisse la confiance de la fiche finale et dis pourquoi.
+
+> **Sans accès web** (tu appliques la méthode à la main, ou ton outil ne navigue pas) : demande au client 5 à 10 contenus représentatifs et variés, puis enchaîne. Un seul texte ne suffit jamais : le modèle surinterprète alors des détails non signifiants. Il faut du volume pour distinguer le pattern du hasard.
 
 ### Étape 2 — Analyser sur 8 dimensions (avec triangulation)
 

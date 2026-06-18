@@ -36,7 +36,7 @@ Trois façons, selon ton outillage :
 
 **Avec un LLM.** Colle le contenu du `SKILL.md` en contexte de ton modèle (Claude, ChatGPT, autre), puis donne ta tâche : « Voici ma méthode de brand voice. Analyse ces 6 textes et produis la fiche. » Les skills contiennent aussi des **prompts d'injection** prêts à copier (Brand Voice étape 6, Écriture française étape 5).
 
-**Comme skill Claude.** Chaque dossier suit le format [Agent Skill](https://code.claude.com/docs/en/skills) (frontmatter `name` + `description`). Copie le dossier du skill dans `~/.claude/skills/` (Claude Code) ou importe-le depuis les réglages de Claude : il se déclenchera tout seul quand ta demande correspond.
+**Comme skill Claude.** Chaque dossier suit le format [Agent Skill](https://code.claude.com/docs/en/skills) (frontmatter `name`, `description`, `argument-hint`). Copie le dossier dans `~/.claude/skills/` (Claude Code) ou importe-le depuis les réglages de Claude. Le nom du dossier devient la commande : appelle-la avec son argument (`/brand-voice https://exemple.com`), ou laisse le skill se déclencher quand ta demande correspond.
 
 ## Format d'un skill
 

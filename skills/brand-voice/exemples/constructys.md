@@ -12,10 +12,9 @@
 - Page "Nos réalisations" (620 mots)
 - Article de blog "Pourquoi le modulaire bas carbone est l'avenir du BTP" (1100 mots)
 - Post LinkedIn du DG (180 mots)
-- Email de prospection type (250 mots)
 - Fiche technique produit (340 mots)
 
-**Total** : ~2970 mots sur 6 textes.
+**Total** : ~2720 mots sur 5 textes.
 
 ## Étape 2 : Patterns extraits
 
@@ -54,7 +53,7 @@
 
 ```markdown
 # Voix de marque : Constructys
-Mise à jour : 18/06/2026 • Confiance : élevée (6 textes, 2970 mots)
+Mise à jour : 18/06/2026 • Confiance : élevée (5 textes, 2720 mots)
 
 ## En une phrase
 Constructys parle comme un expert technique qui prouve à des maîtres

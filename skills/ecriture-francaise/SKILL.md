@@ -1,6 +1,7 @@
 ---
 name: ecriture-francaise
 description: Rédiger, corriger et relire du français pour éliminer le slop IA, ce style artificiel des LLM qui écrivent le français avec un accent américain. Utiliser ce skill quand un texte français généré ou assisté par IA sonne faux, pour humaniser un contenu, mesurer sa qualité stylistique (burstiness, lexique signature, typographie), purger les anglicismes et tics de langage, ou cadrer un prompt de rédaction FR en amont. Couvre 7 métriques stylométriques, un lexique de purge et les règles de typographie française. NE PAS utiliser pour définir une voix de marque (voir le skill brand-voice).
+argument-hint: "[chemin du fichier ou texte à corriger]"
 license: MIT
 ---
 
@@ -29,6 +30,8 @@ Le traitement a trois temps :
 - Tu publies en français et ta crédibilité dépend de la qualité de la langue.
 
 ## Méthode
+
+**Entrée.** Le skill s'active sur un fichier ou un texte : `/ecriture-francaise article.md`, ou colle le texte directement. Si `$ARGUMENTS` pointe un fichier, lis-le et rends la version corrigée ; sinon, traite le texte fourni.
 
 ### Étape 1 — Mesurer : les 7 marqueurs du slop
 
@@ -128,8 +131,7 @@ Corriger coûte plus cher que cadrer. Injecte ces consignes **avant** la génér
 - [Les 7 métriques](references/metriques.md) : définitions et méthode de calcul.
 - [Anti-anglicismes](references/anti-anglicismes.md) : table de remplacement pour le marketing B2B.
 - [Brand Voice](../brand-voice/SKILL.md) : le skill complémentaire. Fixe d'abord la voix, puis nettoie le slop qui la pollue.
-- *Le français est à nous*, Laélia Véron et Maria Candea : pour penser la langue sans purisme.
-- *Dire, ne pas dire*, Académie française : pour les anglicismes et néologismes.
+
 
 ---
 

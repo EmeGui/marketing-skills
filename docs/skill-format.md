@@ -71,6 +71,7 @@ Les erreurs les plus fréquentes. Format : liste avec ❌ / ✅.
 
 - **`name`** : identique au nom du dossier, en minuscules avec tirets (`brand-voice`), sans accent ni espace. 64 caractères max.
 - **`description`** : le champ le plus important. C'est lui qu'un assistant lit pour décider quand activer le skill. Dis ce que le skill fait *et* dans quelles situations l'employer, avec des déclencheurs concrets. 1024 caractères max, troisième personne.
+- **`argument-hint`** : facultatif, pour un skill qui prend une entrée (une URL, un fichier). Indique l'argument attendu (`[url]`, `[fichier]`) ; le corps du skill le récupère via `$ARGUMENTS`.
 - **`license`** : facultatif. `MIT` par défaut dans ce repo.
 
 ## Contraintes de style
